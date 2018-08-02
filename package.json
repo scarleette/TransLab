@@ -1,0 +1,14 @@
+{
+  "name": "translab",
+  "version": "0.0.1",
+  "description": "Poder consultar el saldo de tu tarjeta bip",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "saldo"
+  ],
+  "author": "scarlett Obreque",
+  "license": "ISC"
+}
