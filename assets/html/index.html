@@ -7,9 +7,37 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>TransLab</title>
 </head>
 <body>
+  <header> 
+    <h1>Login</h1>
+  </header>
+  <section>
+    <div class="row">
+      <div class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix"></i>
+            <input type="text" id="autocomplete-input" class="autocomplete">
+            <label for="autocomplete-input">Email</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix"></i>
+            <input type="text" id="autocomplete-input" class="autocomplete">
+            <label for="autocomplete-input">Contraseña</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- // Initialize Firebase  -->
   <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
   <script>
