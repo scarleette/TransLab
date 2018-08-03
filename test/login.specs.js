@@ -12,27 +12,34 @@ describe('Validar emails', ()=>{
       //Caso de prueba,equal es una funcion de asserts
       //assert.equal verifica que el parámetro 1 sea igual al parámetro 2
       // en esta linea se afirma que el correo solo debe tener un arroba
-      assert.equal(validateEmail("asdf@asdf.com"), true); 
+      assert.equal(validarEmail("asdf@asdf.com"), true); 
       //en esta linea se afirma que no debe tener mas de un arroba
-      assert.equal(validateEmail("asdf@@asdf.com"), false);
+      assert.equal(validarEmail("asdf@@asdf.com"), false);
       //en esta linea se afirma que si no tiene arroba sea false
-      assert.equal(validateEmail("asdf.com"), false);
+      assert.equal(validarEmail("asdf.com"), false);
     });
     it('Debería el correo tener un arroba antes del dominio', ()=>{
-        assert.equal(validateEmail(".com@asdf"), false);
-        assert.equal(validateEmail("fabian@laboratoria.la"), true);
+        assert.equal(validarEmail(".com@asdf"), false);
+        assert.equal(validarEmail("fabian@laboratoria.la"), true);
     });
-});(
+});
   describe('Debería verificar si tiene un dominio', ()=>{
     it('Tiene un punto y luego solo caracteres del alfabeto', ()=>{
-      assert.equal(validateEmail('asdf@asdf'), false);
-      assert.equal(validateEmail('asdf@asdf.'), false);
+      assert.equal(validarEmail('asdf@asdf'), false);
+      assert.equal(validarEmail('asdf@asdf.'), false);
     });
-}));
-  describe('Debería verificar que no tenga carácteres raros', ()=>{
+  });
+});
 
-  });(
-  describe('Debería verificar que tenga al menos 1 caracter antes del arroba', ()=>{
-
-  }));
+// Test para validar contraseña
+describe('validar contraseña', ()=>{
+  it('deberia tener solo 8 caracteres', ()=> {
+    assert.equal(validarClave('asdfcerf'), true);
+    assert.equal(validarClave('asdcdesrf'), false);
+  describe('deberia ser alfanúmerica', ()=> {
+    it('deberia tener 2 numeros', ()=> {
+      assert.equal(validarClave('asdecs', 1, 2), true);
+    });
+  });
+});
 });
