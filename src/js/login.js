@@ -30,8 +30,12 @@ window.validarClave = (clave)=> {
   if(clave.length > 8) {
     return false;
   };
-  const validador = '^(?=(?:.*\d){2})(?=(?:.*[A-Z]){1})(?=(?:.*[a-z]){1})\S{8}$';
-  if(clave != validador) {
+  const claveNumerica = typeof(clave);
+  if(claveNumerica == 'string') {
+    return false;
+  }
+  if(claveNumerica === 'number') {
     return true;
-  };
+  }
 };
+

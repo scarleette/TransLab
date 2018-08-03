@@ -36,10 +36,9 @@ describe('validar contraseña', ()=>{
   it('deberia tener solo 8 caracteres', ()=> {
     assert.equal(validarClave('asdfcerf'), true);
     assert.equal(validarClave('asdcdesrf'), false);
-  describe('deberia ser alfanúmerica', ()=> {
-    it('deberia tener 2 numeros', ()=> {
-      assert.equal(validarClave('asdecs', 1, 2), true);
+  });
+  it('deberia tener solo numeros', ()=> {
+    assert.equal(validarClave('adsfdf', 1), false);
+    assert.equal(validarClave('12345678'), true);
     });
   });
-});
-});
