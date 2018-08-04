@@ -6,44 +6,52 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-  <link rel="stylesheet" href="/assets/css/style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
   <title>TransLab</title>
 </head>
 <body>
-  <section>
+  <section class="#424242 grey darken-3">
     <div class="container">
       <div class="row">
         <div class="col s12">
-          <img src="" alt="">
-          <h1>Trans-Lab</h1>
+          <img src="../img/imagen.png" id="imagen">
         </div>
       </div>
     </div>
-  </section>
-  <section>
+    <div class="container">
     <div class="row">
-      <div class="col s12">
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">mail_outline</i>
-            <input type="text" id="autocomplete-input" class="autocomplete">
-            <label for="autocomplete-input">Email</label>
-          </div>
-        </div>
+      <div class="col s12" style="text-align: center" id="titulo">
+        <h2 >TRANS-LAB</h2>
       </div>
     </div>
-    <div class="row">
-      <div class="col s12">
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">mode_edit</i>
-            <input type="text" id="autocomplete-input" class="autocomplete">
-            <label for="autocomplete-input">Contraseña</label>
-          </div>
-        </div>
+  </div>
+  <div class="container">
+    <form action="" id="formulario" class= '#ffffff white'>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">perm_identity</i>
+          <input id="email" type="text" class="validate">
+          <label for="icon_identity">E-mail</label>
+      </div>
+      <div class="input-field col s12">
+        <i class="material-icons prefix">lock_outline</i>
+        <input id="password" type="password" class="validate">
+        <label for="icon_password">Contraseña</label>
+      </div>
+      <div class="col s12  amber darken-2">
+        <a class="waves-effect waves-teal btn-large btn-flat" id="boton">Iniciar sesión</a>
       </div>
     </div>
+    </form>
+      <div class="row">
+        <div class="col s12">
+          <p>¿Olvidaste tu contraseña?</p>
+        </div>
+        <div class="col s12">
+          <p>¿NO TIENES CUENTA? <a href="">REGÍSTRATE</a></p>
+        </div>
+      </div>
   </section>
   <!-- // Initialize Firebase  -->
   <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
