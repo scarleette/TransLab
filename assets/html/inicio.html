@@ -15,7 +15,14 @@
   <section>
   <nav class="#424242 grey darken-3"> 
     <div id="barra"> 
-      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+      <div class="container">
+        <div class="row">
+          <div class="col s12" style="text-align: center">
+              <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+            <h5>TRAN-LAB</h5>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
   <!--Despliegue menú-->
@@ -28,7 +35,7 @@
       <li><div class="divider"></div></li>
       <li><a href="../html/inicio.html"><i class="material-icons">arrow_forward</i>Home</a></li>
       <li><div class="divider"></div></li>
-      <li><button id="logOut" onclick="logoutWithFirebase()">LogOut</button></li>
+      <li><input  type="button" id="logOut" onclick="logoutWithFirebase()" value="LogOut"></li>
   </ul>
   <section id="botones">
     <div class="container">
