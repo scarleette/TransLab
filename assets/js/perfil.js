@@ -5,7 +5,7 @@ $(document).ready(function(){
 window.onload = () =>{
   firebase.auth().onAuthStateChanged( user =>{
       if(user){ //Si está logeado, mostraremos la opción loggedIn
-        perfil(user);        
+        perfil(user);  
       }
   });
 }
@@ -19,12 +19,25 @@ function perfil(user) {
 // funcion para desloguearse
 function logoutWithFirebase(){
   firebase.auth().signOut()
-      .then(()=>{
-          location.href = './login.html';
-      })
-      .catch((error)=>{
-        console.log("Error de firebase > Código > "+error.code); 
-        console.log("Error de firebase > Mensaje > "+error.message); 
-      });
-}
+    .then(()=>{
+      location.href = './login.html';
+    })
+    .catch((error)=>{
+      console.log("Error de firebase > Código > "+error.code); 
+      console.log("Error de firebase > Mensaje > "+error.message); 
+    });
+};
+
+const formularioTarjeta = document.getElementById('formulario');
+
+formularioTarjeta.addEventListener('submit', nuevaTarjeta => {
+  nuevaTarjeta.preventDefault();
+  const tarjetaUsuario = document.getElementById('tarjetaNueva').value;
+  const idUser = user.uid;
+  firebase.database().ref(`users/${idUser}`).set({
+    tarjetas: tarjetaUsuario
+  })
+  console.log('todo salio mal');
+  
+})
 
