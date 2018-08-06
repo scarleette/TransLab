@@ -11,4 +11,9 @@ function logoutWithFirebase(){
         console.log("Error de firebase > Código > "+error.code); 
         console.log("Error de firebase > Mensaje > "+error.message); 
       });
+};
+
+function calcular() {
+  const otraTarjeta = document.getElementById('otraTarjeta').value;
+  const selectTarifa = document.getElementById()
 }
