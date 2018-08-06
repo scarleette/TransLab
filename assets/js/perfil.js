@@ -5,15 +5,23 @@ $(document).ready(function(){
 window.onload = () =>{
   firebase.auth().onAuthStateChanged( user =>{
       if(user){ //Si está logeado, mostraremos la opción loggedIn
-        perfil(user);  
+        perfil(user);
+        agregarTarjetas(user);
       }
   });
 }
-// funcion para rescatar el correo del usuario
+// funcion para rescatar el correo del usuario y crear usuario en firebasedatabase
 function perfil(user) {
   const correoUsuarioLogueado = document.getElementById('correoUsuario');
   const correo = user.email;
   correoUsuarioLogueado.innerHTML = `<h5>${correo}</h5>`;
+  const idUser = user.uid;
+  const correoUsuario = user.email;
+  // console.log(idUser);
+  firebase.database().ref('users/'+ idUser).set({
+    id: idUser,
+    email: correoUsuario,
+  })
 };
 
 // funcion para desloguearse
@@ -28,16 +36,11 @@ function logoutWithFirebase(){
     });
 };
 
-const formularioTarjeta = document.getElementById('formulario');
+const formulario = document.getElementById('formulario');
+function agregarTarjetas(user) {
+  const tarjetaNueva = document.getElementById('tarjetaNueva').value;
+  const tarjeta1 = document.getElementById('tarjeta1');
+  tarjeta1.innerHTML += `<h6><strong>Tarjeta : ${tarjetaNueva}<strong><h6>`;
+};
 
-formularioTarjeta.addEventListener('submit', nuevaTarjeta => {
-  nuevaTarjeta.preventDefault();
-  const tarjetaUsuario = document.getElementById('tarjetaNueva').value;
-  const idUser = user.uid;
-  firebase.database().ref(`users/${idUser}`).set({
-    tarjetas: tarjetaUsuario
-  })
-  console.log('todo salio mal');
-  
-})
-
+formulario.addEventListener('submit', agregarTarjetas);
