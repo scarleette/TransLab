@@ -1,4 +1,3 @@
-let userId;
 const formulario = document.getElementById('formulario');
 
 formulario.addEventListener('submit', e =>  {
@@ -16,3 +15,5 @@ formulario.addEventListener('submit', e =>  {
       });
     }
 });
+
+console.log(userId);
