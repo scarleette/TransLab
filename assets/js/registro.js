@@ -9,6 +9,7 @@ formulario.addEventListener('submit', e =>  {
         .then(Response => {
         userId  = Response;
         console.log(userId);
+        location.href = '../html/login.html';
         console.log('ya envie los datos');  
       }).catch((error)=>{
         console.log(error);
