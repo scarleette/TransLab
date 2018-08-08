@@ -1,3 +1,13 @@
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+});
+
+window.onload = () =>{
+  firebase.auth().onAuthStateChanged( user =>{
+      if(user){ //Si está logeado, mostraremos la opción loggedIn
+      }
+  });
+}
 // funcion para desloguearse
 function logoutWithFirebase(){
   firebase.auth().signOut()
