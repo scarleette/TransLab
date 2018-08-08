@@ -2,6 +2,10 @@ $(document).ready(function(){
   $('.sidenav').sidenav();
 });
 
+$(document).ready(function(){
+  $('.collapsible').collapsible();
+});
+      
 window.onload = () =>{
   firebase.auth().onAuthStateChanged( user =>{
       if(user){ //Si está logeado, mostraremos la opción loggedIn
